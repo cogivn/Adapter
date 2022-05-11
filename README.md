@@ -5,7 +5,7 @@ Thanks for your awesome libraries.
 In your `build.gradle`:
 ```groovy
 dependencies {
-  implementation 'co.legato.libraries:adapter:1.1.4'
+  implementation 'co.legato.libraries:adapter:1.1.5'
 }
 ```
 
@@ -68,6 +68,12 @@ class FooViewDelegate : ViewDelegate<Item, FooView>() {
   override fun onCreateView(context: Context): FooView {
     return FooView(context).apply { layoutParams = LayoutParams(MATCH_PARENT, WRAP_CONTENT) }
   }
+  
+   override fun onViewCreated(
+        holder: Holder<Item, FooView>,
+    ) = holder.binding.root.setOnClickListener {
+        Toast.makeText(it.context, holder.data?.name, Toast.LENGTH_SHORT).show()
+    }
 
   override fun onBindView(view: FooView, item: Item) {
     view.imageView.setImageResource(item.imageResId)
@@ -90,6 +96,12 @@ class TextViewBindingDelegate : ViewBindingDelegate<Item, BinderItemViewBinding>
 
     override fun onCreateView(inflater: LayoutInflater, parent: ViewGroup): BinderItemViewBinding {
         return BinderItemViewBinding.inflate(inflater, parent, false)
+    }
+    
+     override fun onViewCreated(
+        holder: Holder<Item, BinderItemViewBinding>,
+    ) = holder.binding.root.setOnClickListener {
+        Toast.makeText(it.context, holder.data?.name, Toast.LENGTH_SHORT).show()
     }
 
     override fun onBindView(binding: BinderItemViewBinding, item: Item) {
