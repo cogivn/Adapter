@@ -90,7 +90,7 @@ class FooViewDelegate : ViewDelegate<Item, FooView>() {
 }
 ```
 
-##### Or if you are using a  ViewBingding, you can use `ViewBindingDelegate`:
+##### Or if you are using a  ViewBinding, you can use `ViewBindingDelegate`:
 ```kotlin
 class TextViewBindingDelegate : ViewBindingDelegate<Item, BinderItemViewBinding>() {
 
