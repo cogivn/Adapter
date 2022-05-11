@@ -71,7 +71,7 @@ class FooViewDelegate : ViewDelegate<Item, FooView>() {
   
    override fun onViewCreated(
         holder: Holder<Item, FooView>,
-    ) = holder.binding.root.setOnClickListener {
+    ) = holder.view.setOnClickListener {
         Toast.makeText(it.context, holder.data?.name, Toast.LENGTH_SHORT).show()
     }
 
