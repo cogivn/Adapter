@@ -135,12 +135,10 @@ class SampleActivity : AppCompatActivity() {
 
     val textItem = TextItem("world")
     val imageItem = ImageItem(R.mipmap.ic_launcher)
-    val richItem = RichItem("小艾大人赛高", R.drawable.img_11)
 
     for (i in 0..19) {
       items.add(textItem)
       items.add(imageItem)
-      items.add(richItem)
     }
     adapter.items = items
     adapter.notifyDataSetChanged()
