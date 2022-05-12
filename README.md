@@ -13,7 +13,7 @@ dependencies {
 
 - `FlexibleAdapter`: Normal adapter without paging3
 - `Paging3DataAdapter`: Include paging3 libraries of google.
-- `RecyclerView Selection Library of google`: It uses the selection library to provide extra features the user can interact with, namely:\
+- `RecyclerView Selection Library`: It uses the selection library to provide extra features the user can interact with, namely:\
         1. Pressing an item crosses it from the list.\
         2. Long-pressing an item triggers multiple-selection mode.
 
