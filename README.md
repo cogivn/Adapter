@@ -1,6 +1,3 @@
-This libraries has been customized from `drakeet`. 
-Thanks for your awesome libraries.
-
 ## Getting started
 In your `build.gradle`:
 ```groovy
